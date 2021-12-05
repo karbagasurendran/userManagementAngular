@@ -1,0 +1,84 @@
+
+/* .example-spacer {
+  flex: 1 1 auto;
+} */
+
+
+
+/* .top-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+/* 
+.custom-select{
+    width: 350px;
+} */
+
+/* .date-container{
+    padding-right: 70px;
+    margin-top: 50px;
+} */
+
+#sheet{
+  margin-right: 25px;
+}
+.top-btn{
+  margin-left: auto;
+}
+
+.insights-container {
+  display: flex;
+  justify-content: space-between;
+   /* margin-top: 5px; */
+  margin-bottom: 25px;
+}
+
+.btn-container{
+  /* height: 40px; */
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top:70px ;
+  align-items: flex-end;
+  font-size: 14px;
+}
+
+mat-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+}
+
+.table-container{
+  /* // padding: 20px; */
+  margin: 30px;
+}
+
+
+.mat-header-cell {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    padding: 17px !important;
+  }
+}
+
+.mat-cell {
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    padding: 5px !important;
+  }
+}
+
+.my-custom-class{
+  --max-height : 200px !important;
+}
+

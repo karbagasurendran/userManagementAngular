@@ -1,0 +1,72 @@
+<mat-toolbar color="primary">
+  <span>User Management</span>
+  <div class="top-btn">
+  <button id="sheet" mat-mini-fab color="accent" (click)="opensheet()">
+  <mat-icon>description</mat-icon>
+</button>
+  <button mat-mini-fab color="accent" (click)="logOut()">
+  <mat-icon >power_settings_new</mat-icon>
+ </button>
+</div>
+</mat-toolbar>
+<div class="banner-container">
+    <div class="top-container">
+    </div>
+    <div class="insights-container">
+      <div class="btn-container">
+        <button mat-raised-button color="primary" (click)="addUser()">
+          <mat-icon>add_circle</mat-icon>&nbsp; Add User
+        </button>
+      </div>
+    </div>
+    <div class="table-container mat-elevation-z8">
+      <div class="search-container">
+        
+      </div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Name Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> User ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="image">
+          <th mat-header-cell *matHeaderCellDef> Profile</th>
+          <td mat-cell *matCellDef="let element">
+              <img src={{element.image}} style="width: 60px; height: 60px; border-radius: 50%;">
+          </td>
+      </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+        </ng-container>
+
+
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="mobileNumber">
+          <th mat-header-cell *matHeaderCellDef> Mobile No </th>
+          <td mat-cell *matCellDef="let element"> {{element.mobileNumber}} </td>
+        </ng-container>
+
+          <ng-container matColumnDef="emailId">
+            <th mat-header-cell *matHeaderCellDef> EmailId</th>
+            <td mat-cell *matCellDef="let element"> {{element.emailId}} </td>
+          </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions</th>
+          <td mat-cell *matCellDef="let row; let i = index">
+            <!-- <a [routerLink]="['/update-user',i.employeeId]"> -->
+            <mat-icon (click)=updateUser(row)>mode_edit_outline</mat-icon>
+            &nbsp;<mat-icon  (click)=deleteUser(row)>delete_outline</mat-icon>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>

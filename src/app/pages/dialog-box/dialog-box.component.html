@@ -1,0 +1,61 @@
+<div class="register-container">
+  <div class="page-name">Add User</div>
+  <mat-card class="login-card">
+    <div class="body-container" [formGroup]="adduserForm">
+      <div>
+        <input class="custom-input" placeholder="user name" formControlName="userName" />
+      </div>
+      <div *ngIf="(userName.dirty || userName.touched) && userName.errors" class="errors">
+        <span *ngIf="userName.errors?.required">ⓘ UserName is required</span>
+      </div>
+      <div>
+        <input class="custom-input" placeholder="user email" formControlName="emailId" />
+      </div>
+      <div *ngIf="(emailId.dirty || emailId.touched) &&emailId.errors" class="errors">
+        <span *ngIf="emailId.errors?.required">ⓘ emailId is required</span>
+        <span *ngIf="emailId.errors?.pattern">ⓘ Enter Valid emailId</span>
+      </div>
+      <div>
+        <input class="custom-input" placeholder="user mobile number" formControlName="mobileNumber" />
+      </div>
+      <div *ngIf="(mobileNumber.dirty || mobileNumber.touched) && mobileNumber.errors" class="errors">
+        <span *ngIf="mobileNumber.errors?.required">ⓘ MobileNumber is required</span>
+        <span *ngIf="mobileNumber.errors?.pattern">ⓘ Enter Valid MobileNumber</span>
+      </div>
+      <div>
+        <input class="custom-input" placeholder="user ID" formControlName="userId" />
+      </div>
+      <div *ngIf="(userId.dirty || userId.touched) && userId.errors" class="errors">
+        <span class="errorText" *ngIf="userId.errors?.required">ⓘ UserId is required</span>
+      </div>
+      <div>
+        <input class="custom-input" placeholder="user password" formControlName="password" />
+      </div>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">ⓘ password is required</span>
+        <span *ngIf="password.errors?.pattern">ⓘ Enter Valid password</span>
+      </div>
+      <div class="attenchment">
+        <button (click)=takePicture()>
+          <mat-icon color="primary">attachment</mat-icon>
+        </button>
+        <span *ngIf="imagelink">{{imagelink}}</span>
+      </div>
+      <!-- <div class="form-group">
+      <label for="file">Choose File</label>
+      <input type="file"
+             id="file"
+             (change)="onChange($event.target.files)">
+  </div> -->
+
+    </div>
+    <div class="btn-container">
+      <button mat-raised-button class="custom-btn" color="primary" (click)="close()">
+        Cancel
+      </button>
+      <button mat-raised-button class="btn-container" color="accent" (click)="save()" type="submit">
+        save
+      </button>
+    </div>
+  </mat-card>
+</div>

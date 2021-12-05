@@ -1,0 +1,60 @@
+.login-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* background: rgb(119, 16, 255); */
+    /* background: linear-gradient(
+      90deg,
+      rgba(119, 16, 255, 1) 50%,
+      rgba(192, 55, 253, 1) 100%
+    ); */
+  }
+  
+  .login-card {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .body-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .custom-input {
+      width: 90%;
+      margin-top: 20px;
+      padding: 12px;
+      border: 2.2px solid #eff0f2;
+      border-radius: 10px;
+      background-color: white;
+    }
+    
+  .name-container {
+    font-size: 20px;
+    color: #374088;
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+  }
+  
+  .custom-btn {
+      width: 90%;
+      margin-top: 30px;
+      font-size: 14px;
+      height: 40px;
+    }
+  

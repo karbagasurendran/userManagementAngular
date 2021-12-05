@@ -1,0 +1,27 @@
+<div class="login-container">
+    <mat-card class="login-card">
+      <div class="logo-container"><img src="assets/logo2.png" /></div>
+      <div class="name-container" color="primary">User Management</div>
+      <mat-form-field class="body-container" [formGroup]='loginForm'>
+        <div>
+          <input
+            class="custom-input"
+            placeholder="Username"
+            formControlName="userName"
+          />
+        </div>
+        <div>
+          <input
+            class="custom-input"
+            type="password"
+            placeholder="password"
+            formControlName="password"
+          />
+        </div>
+        <div class="btn-container">
+          <button mat-stroked-button color="primary" (click)="login()">Sign in</button>
+        </div>
+        </mat-form-field>
+        <div>if you new user click this -><a [routerLink]="['/register']">Register</a></div>
+    </mat-card>
+  </div>
