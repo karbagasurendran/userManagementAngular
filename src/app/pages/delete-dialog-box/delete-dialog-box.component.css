@@ -1,0 +1,11 @@
+.mat-typography{
+font-family: "Roboto", sans-serif;
+font-size: 20px;
+margin-left: 40px;
+display: flex;
+width: 200px;
+height: 100px;
+}
+.custom-btn2{
+    background-color: accent;
+}

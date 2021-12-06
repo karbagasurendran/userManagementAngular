@@ -1,46 +1,56 @@
-
-
-.box {
-	position: relative;
-	top: 0;
-	opacity: 1;
-	float: left;
-	padding: 60px 50px 40px 50px;
-	width: 100%;
-	background: #fff;
-	border-radius: 10px;
-	transform: scale(1);
-	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
-	z-index: 5;
-	max-width: 330px;
+.register-container {
+  /* background-position: center; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* padding-right: 10px; */
+  /* padding-left: 10px; */
 }
-label{
-  position: relative;
+.custom-btn{
+  margin-right: 45px;
 }
-button{
-  margin-bottom: 30px;
-   margin-left: 30px;
+#lable{
+  margin-right: 30px;
+  font-family: "Roboto", sans-serif;
+  font-style: bold;
+  font-weight: 800;
+}
+.login-card{
+  margin-top: 40px;
+  width: 400px;
+  height: 550px;
+ align-items: unset;
+ border-radius: 10px;
+}
+.btn-container{
+   margin-top: 30px;
+   align-items: auto;
+   padding-left: 120px;
+}
+.btn{
+   padding-left: 5px;
 }
 .body-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     padding: 10px;
     text-align: center;
   }
   .page-name {
-    margin-top: 100px;
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     margin-left: 40px;
+    margin-top: 10px;
     display: flex;
      /* align-items: center; */
     height: 10px;
   }
 
   .custom-input {
-    width: 90%;
+    width: 80%;
     margin-top: 20px;
     padding: 12px;
     border: 2.2px solid #eff0f2;

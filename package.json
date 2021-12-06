@@ -24,6 +24,8 @@
     "@auth0/angular-jwt": "^5.0.2",
     "@capacitor/camera": "^1.2.1",
     "@capacitor/core": "^3.3.2",
+    "@cryptr/cryptr-angular": "^1.0.1",
+    "cryptr": "^6.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

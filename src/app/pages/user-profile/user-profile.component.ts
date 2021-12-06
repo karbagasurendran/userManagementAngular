@@ -59,7 +59,8 @@ export class UserProfileComponent implements OnInit {
   }
  
   addUser() {
-   var dialogRef= this.dialog.open(DialogBoxComponent)
+   var dialogRef= this.dialog.open(DialogBoxComponent,{
+   })
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed',result);

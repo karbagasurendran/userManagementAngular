@@ -1,8 +1,9 @@
-<h2 mat-dialog-title>Delete User</h2>
-<mat-dialog-content class="mat-typography">
+<mat-dialog-content>
+	<p>
+		Are you sure want to delete?
+	</p>
 </mat-dialog-content>
-<h2>Are you sure want to delete?</h2>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button (click)=userDelete()>Delete</button>
+<mat-dialog-actions align="center">
+	<button mat-raised-button color="primary" (click)="userDelete()" tabindex="1">Delete</button>
+	<button mat-raised-button mat-dialog-close tabindex="-1">Cancel</button>
 </mat-dialog-actions>

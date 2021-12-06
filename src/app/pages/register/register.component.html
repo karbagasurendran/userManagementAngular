@@ -1,9 +1,6 @@
-<mat-toolbar>
-  <span>User Management</span>
-</mat-toolbar>
 <div class="register-container">
-  <div class="modal-name">Register User</div>
-  <mat-card class="box">
+  <div class="page-name">Register User</div>
+  <mat-card class="login-card">
     <div class="body-container" [formGroup]="adduserForm">
       <div>
         <input class="custom-input" placeholder="user name" formControlName="userName" />
@@ -38,23 +35,20 @@
         <span *ngIf="password.errors?.required">ⓘ password is required</span>
         <span *ngIf="password.errors?.pattern">ⓘ Enter Valid password</span>
       </div>
-      <div><button  (click)=takePicture()>
-     <mat-icon color="primary">attachment</mat-icon>
-    </button><div *ngIf="imagelink" >{{imagelink}}</div>
-     </div>
-     <!-- <div class="form-group">
-      <label for="file">Choose File</label>
-      <input type="file"
-             id="file"
-             (change)="onChange($event.target.files)">
-  </div> -->
-  
+      
+      <div class="attenchment">
+        <label id=lable>capture image</label>
+        <button mat-mini-fab (click)=takePicture()>
+          <mat-icon color="primary">add_a_photo</mat-icon>
+        </button>
+        <span *ngIf="imagelink">{{imagelink}}</span>
+      </div>
     </div>
     <div class="btn-container">
-      <button mat-button class="custom-btn" color="primary" (click)="close()" mode="ios">
+      <button mat-raised-button class="custom-btn" color="primary" (click)="cancel()">
         Cancel
       </button>
-      <button mat-button class="btn-container" color="primary" (click)="save()" type="submit">
+      <button mat-raised-button color="accent" (click)="save()" type="submit">
         save
       </button>
     </div>

@@ -1,56 +1,67 @@
-.register-container {
-    /* background-position: center; */
-    background-size: cover;
+.register-container{
+  /* background-position: center; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 450px;
+  /* padding-right: 10px; */
+  /* padding-left: 10px; */
+}
+
+mat-card{
+  width: 402px;
+  height:555px;
+  shape-outside: none;
+  box-shadow: none;
+}
+/* button{
+  align-self: start;
+} */
+.btn-container{
+  padding: 10px;
+    text-align: center;
+}
+.body-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 550px;
-    width: 400px;
-    /* padding-right: 10px; */
-    /* padding-left: 10px; */
+    padding: 10px;
+    text-align: center;
   }
- .btn-container{
-     padding-left: 160px;
-     align-items: center;
- }
-.btn{
-     padding-left: 5px;
- }
-  .body-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 10px;
-      text-align: center;
-    }
-    .page-name {
-      font-family: "Roboto", sans-serif;
-      font-size: 20px;
-      margin-left: 40px;
-      display: flex;
-       /* align-items: center; */
-      height: 10px;
-    }
+  .page-name {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+    display: flex;
+     /* align-items: center; */
+  }
+
+  .custom-input {
+    width: 90%;
+    margin-top: 20px;
+    padding: 12px;
+    border: 2.2px solid #eff0f2;
+    border-radius: 10px;
+    background-color: white;
+    align-items: flex-start;
+  }
   
-    .custom-input {
-      width: 50%;
-      margin-top: 20px;
-      padding: 12px;
-      border: 2.2px solid #eff0f2;
-      border-radius: 10px;
-      background-color: white;
-      align-items: flex-start;
-    }
-    
-  
-    .attenchment{
-      padding-top: 10px;
-      align-items: flex-end;
-    }
-    .errors{
-      color: red;
-      font-size: smaller;
-      text-align: left;
-      margin-left: 20px;
-    }
+.custom-btn,#lable{
+  margin-right: 25px;
+}
+
+
+  .attenchment{
+    padding-top: 10px;
+    align-items: flex-end;
+    margin: 10px;
+  }
+  .errors{
+    color: red;
+    font-size: smaller;
+    text-align: left;
+    margin-left: 20px;
+  }

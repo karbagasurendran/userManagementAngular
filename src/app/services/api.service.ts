@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import{catchError} from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { NONE_TYPE } from '@angular/compiler';
 
 
 @Injectable({
@@ -11,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
   constructor(
     private http : HttpClient
-  ) { }
+  ) {this.getToken() }
   imgUrl = 'http://localhost:3000/public/'
   
 
@@ -24,12 +25,12 @@ export class ApiService {
   }
 
   getuser(){
+    console.log(this.header);
     return this.http.get(environment.apiUrl + 'users/user-list', this.header)
   }
  
   deleteUserById(id:any){
-    console.log('services'+id);
-    return this.http.post(environment.apiUrl + 'users/delete-user/' + id, this.header)
+    return this.http.get(environment.apiUrl+'users/delete-user/'+ id,this.header)
   }
 
   updateUserById(id, data){

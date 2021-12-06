@@ -28,18 +28,20 @@
       <div *ngIf="(userId.dirty || userId.touched) && userId.errors" class="errors">
         <span class="errorText" *ngIf="userId.errors?.required">ⓘ UserId is required</span>
       </div>
-      <div>
+      <!-- <div>
         <input class="custom-input" placeholder="user password" formControlName="password" />
       </div>
       <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
         <span *ngIf="password.errors?.required">ⓘ password is required</span>
         <span *ngIf="password.errors?.pattern">ⓘ Enter Valid password</span>
-      </div>
+      </div> -->
+      
       <div class="attenchment">
-        <button (click)=takePicture()>
-          <mat-icon color="primary">attachment</mat-icon>
+        <label id=lable>capture image</label>
+        <button mat-mini-fab (click)=takePicture()>
+          <mat-icon color="primary">add_a_photo</mat-icon>
         </button>
-        <div *ngIf="imagelink">{{imagelink}}</div>
+        <span *ngIf="imagelink">{{imagelink}}</span>
       </div>
       <!-- <div class="form-group">
       <label for="file">Choose File</label>
@@ -52,10 +54,10 @@
     <div class="btn-container">
       <button mat-raised-button class="custom-btn" color="primary" (click)="cancel()">
         Cancel
-      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button mat-raised-button class="custom-btn" color="accent" (click)="save()" type="submit">
-        Update
       </button>
-      </div>
+      <button mat-raised-button color="accent" (click)="save()" type="submit">
+        save
+      </button>
+    </div>
   </mat-card>
 </div>

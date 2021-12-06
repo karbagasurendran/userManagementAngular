@@ -109,7 +109,7 @@ get emailId(){
     return this.adduserForm.get('userName');
   }
 
-  close(){
+  cancel(){
     this.router.navigateByUrl('/login');
   }
 

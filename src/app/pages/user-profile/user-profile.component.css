@@ -20,8 +20,13 @@
     margin-top: 50px;
 } */
 
-#sheet{
+mat-toolbar{
+  background: rgb(36, 76, 197);
+  color: rgb(253, 253, 253);
+}
+#sheet,#logout{
   margin-right: 25px;
+  background-color :rgb(36, 76, 197);
 }
 .top-btn{
   margin-left: auto;

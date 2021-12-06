@@ -1,11 +1,11 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <span>User Management</span>
   <div class="top-btn">
-  <button id="sheet" mat-mini-fab color="accent" (click)="opensheet()">
+  <button id="sheet" mat-mini-fab (click)="opensheet()">
   <mat-icon>description</mat-icon>
 </button>
-  <button mat-mini-fab color="accent" (click)="logOut()">
-  <mat-icon >power_settings_new</mat-icon>
+  <button id="logout" mat-mini-fab (click)="logOut()">
+  <mat-icon id="power">power_settings_new</mat-icon>
  </button>
 </div>
 </mat-toolbar>
